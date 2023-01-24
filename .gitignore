@@ -1,0 +1,3 @@
+env
+streamingDatabase/streamingDatabase/.env
+**/__pycache__
