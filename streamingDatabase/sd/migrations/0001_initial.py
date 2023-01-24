@@ -123,9 +123,7 @@ class Migration(migrations.Migration):
                 ("bilibili_handler", models.CharField(max_length=120, null=True)),
                 (
                     "user",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.person"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.person"),
                 ),
             ],
         ),
@@ -144,15 +142,11 @@ class Migration(migrations.Migration):
                 ("end_date", models.DateTimeField(null=True)),
                 (
                     "team",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.team"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.team"),
                 ),
                 (
                     "user",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.person"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.person"),
                 ),
             ],
         ),
@@ -170,15 +164,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "language",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.language"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.language"),
                 ),
                 (
                     "user",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.person"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.person"),
                 ),
             ],
         ),
@@ -196,15 +186,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "game",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.game"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.game"),
                 ),
                 (
                     "team",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.team"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.team"),
                 ),
             ],
         ),
@@ -222,15 +208,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "game",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.game"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.game"),
                 ),
                 (
                     "user",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.person"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.person"),
                 ),
             ],
         ),
@@ -248,15 +230,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "game",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.game"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.game"),
                 ),
                 (
                     "stage",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="sd.stage"
-                    ),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="sd.stage"),
                 ),
             ],
         ),
