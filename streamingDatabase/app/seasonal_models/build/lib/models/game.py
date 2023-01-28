@@ -1,5 +1,4 @@
 from arrow import arrow
-from database_utils import Connection
 
 
 class Game:

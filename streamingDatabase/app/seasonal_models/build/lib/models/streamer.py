@@ -1,7 +1,7 @@
 from .person import Person
 from .team import Team
 from .language import Language
-from typing import List
+from typing import List, Optional
 
 
 class Streamer(Person):
@@ -23,4 +23,32 @@ class Streamer(Person):
         self._twitch_handler = twitch_handler
         self._bilibili_handler = bilibili_handler
         self._team = team
+        self._languages = languages
+
+    @property
+    def youtube_handler(self) -> str:
+        return self._youtube_handler
+
+    @property
+    def twitch_handler(self) -> Optional[str]:
+        return self._twitch_handler
+
+    @property
+    def bilibili_handler(self) -> Optional[str]:
+        return self._bilibili_handler
+
+    @property
+    def team(self) -> Team:
+        return self._team
+
+    @property
+    def languages(self) -> List[Language]:
+        return self._languages
+
+    @team.setter
+    def team(self, team: Team) -> None:
+        self._team = team
+
+    @languages.setter
+    def languages(self, languages: List[Language]) -> None:
         self._languages = languages
