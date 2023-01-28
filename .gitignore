@@ -1,3 +1,5 @@
 env
-streamingDatabase/streamingDatabase/.env
+**/.env
 **/__pycache__
+**/dist
+**.egg-info
