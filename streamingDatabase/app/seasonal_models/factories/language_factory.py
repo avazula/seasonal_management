@@ -2,7 +2,7 @@ from models.language import Language
 from typing import List, Optional
 
 
-class LanguageFactory():
+class LanguageFactory:
     @staticmethod
     def sanitize(id: int, language: str) -> Optional[List[str]]:
         invalid_parameters: List[str] = []
@@ -15,11 +15,11 @@ class LanguageFactory():
                 raise Exception("id must be greater than 0")
         if language is not None:
             if not isinstance(language, str):
-                invalid_parameters.append('language')
-                raise Exception('language must be of type str')
+                invalid_parameters.append("language")
+                raise Exception("language must be of type str")
             elif len(language) < 3 or len(language) > 50:
-                invalid_parameters.append('language')
-                raise Exception('language must be of length 3 < x < 50')
+                invalid_parameters.append("language")
+                raise Exception("language must be of length 3 < x < 50")
         return invalid_parameters if invalid_parameters else None
 
     @staticmethod

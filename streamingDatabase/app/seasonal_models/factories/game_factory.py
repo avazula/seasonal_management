@@ -3,8 +3,7 @@ from typing import List, Optional
 from models.game import Game
 
 
-class GameFactory():
-
+class GameFactory:
     @staticmethod
     def sanitize(id: int, datetime: arrow.arrow.Arrow = None) -> Optional[List[str]]:
         invalid_parameters: List[str] = []
