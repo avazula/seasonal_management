@@ -20,14 +20,14 @@ class PersonFactory:
                 raise Exception("username must be of type str")
             elif len(username) < 4 or len(username) > 80:
                 invalid_parameters.append("username")
-                raise Exception("time must be of length 4 < x < 80")
+                raise Exception("username must be of length 4 < x < 80")
         if discord_handler is not None:
             if not isinstance(discord_handler, str):
                 invalid_parameters.append("discord_handler")
                 raise Exception("discord_handler must be of type str")
             elif len(discord_handler) < 7 or len(discord_handler) > 120:
                 invalid_parameters.append("discord_handler")
-                raise Exception("time must be of length 7 < x < 120")
+                raise Exception("discord_handler must be of length 7 < x < 120")
         if team is not None:
             if not isinstance(team, Team):
                 invalid_parameters.append("team")
@@ -35,7 +35,7 @@ class PersonFactory:
         return invalid_parameters if invalid_parameters else None
 
     @staticmethod
-    def create(id: int, username: str, discord_handler: str, team: Team = None) -> Optional[List[str]]:
+    def create(id: int, username: str, discord_handler: str, team: Team = None) -> Optional[Person]:
         try:
             PersonFactory.sanitize(id, username, discord_handler, team)
         except:

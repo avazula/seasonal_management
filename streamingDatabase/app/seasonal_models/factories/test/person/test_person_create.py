@@ -140,7 +140,7 @@ def test_create_sanitize_returned_username_not_string():
 def test_create_sanitize_returned_username_out_of_bounds():
     with patch.object(PersonFactory, "sanitize") as get_mock:
         with nose.tools.assert_raises(Exception):
-            get_mock.side_effect = Exception("username must be of type str")
+            get_mock.side_effect = Exception("username must be of length 4 < x < 80")
             person = (
                 PersonFactory.create(
                     id=PASSING_ID,
@@ -180,7 +180,7 @@ def test_create_sanitize_returned_discord_handler_not_string():
 def test_create_sanitize_returned_discord_handler_out_of_bounds():
     with patch.object(PersonFactory, "sanitize") as get_mock:
         with nose.tools.assert_raises(Exception):
-            get_mock.side_effect = Exception("discord_handler must be of type str")
+            get_mock.side_effect = Exception("discord_handler must be of length 7 < x < 120")
             person = (
                 PersonFactory.create(
                     id=PASSING_ID,
