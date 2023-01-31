@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-            apt-add-repository ppa:qameta/allure
-            apt-get update 
-            apt-get install allure -y
+            sudo apt-add-repository ppa:qameta/allure
+            sudo apt-get update 
+            sudo apt-get install allure -y
             pip install -r streamingDatabase/requirements.txt
             cd /streamingDatabase/app/seasonal_models
             pytest --aluredir=report .
