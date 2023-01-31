@@ -116,6 +116,7 @@ def test_create_sanitize_returned_id_out_of_bounds():
             )
             assert person is None
 
+
 def test_create_sanitize_returned_username_not_string():
     with patch.object(PersonFactory, "sanitize") as get_mock:
         with nose.tools.assert_raises(Exception):
@@ -134,6 +135,7 @@ def test_create_sanitize_returned_username_not_string():
                 ),
             )
             assert person is None
+
 
 def test_create_sanitize_returned_username_out_of_bounds():
     with patch.object(PersonFactory, "sanitize") as get_mock:
@@ -154,6 +156,7 @@ def test_create_sanitize_returned_username_out_of_bounds():
             )
             assert person is None
 
+
 def test_create_sanitize_returned_discord_handler_not_string():
     with patch.object(PersonFactory, "sanitize") as get_mock:
         with nose.tools.assert_raises(Exception):
@@ -172,6 +175,7 @@ def test_create_sanitize_returned_discord_handler_not_string():
                 ),
             )
             assert person is None
+
 
 def test_create_sanitize_returned_discord_handler_out_of_bounds():
     with patch.object(PersonFactory, "sanitize") as get_mock:
