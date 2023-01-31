@@ -22,7 +22,7 @@ class TeamFactory:
                 invalid_parameters.append("short_name")
                 raise Exception("short_name must be of length 2 < x < 15")
         if language is not None:
-           if not isinstance(language, Language):
+            if not isinstance(language, Language):
                 invalid_parameters.append("language")
                 raise Exception("language must be of type Language")
         if full_name is not None:
