@@ -21,7 +21,7 @@ class Team:
 
     @property
     def short_name(self) -> str:
-        return self._str
+        return self._short_name
 
     @property
     def language(self) -> Language:
