@@ -16,7 +16,7 @@ def test_create_passing_case_check_id(mocker):
         id=PASSING_ID,
         short_name=PASSING_SHORT_NAME,
         full_name=PASSING_FULL_NAME,
-        language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+        language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
     )
     assert team.id == PASSING_ID
 
@@ -27,9 +27,10 @@ def test_create_passing_case_check_short_name(mocker):
         id=PASSING_ID,
         short_name=PASSING_SHORT_NAME,
         full_name=PASSING_FULL_NAME,
-        language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+        language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
     )
     assert team.short_name == PASSING_SHORT_NAME
+
 
 def test_create_passing_case_check_full_name(mocker):
     mocker.patch("factories.TeamFactory.sanitize")
@@ -37,9 +38,10 @@ def test_create_passing_case_check_full_name(mocker):
         id=PASSING_ID,
         short_name=PASSING_SHORT_NAME,
         full_name=PASSING_FULL_NAME,
-        language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+        language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
     )
     assert team.full_name == PASSING_FULL_NAME
+
 
 def test_create_passing_case_check_language_is_of_type_language(mocker):
     mocker.patch("factories.TeamFactory.sanitize")
@@ -47,11 +49,9 @@ def test_create_passing_case_check_language_is_of_type_language(mocker):
         id=PASSING_ID,
         short_name=PASSING_SHORT_NAME,
         full_name=PASSING_FULL_NAME,
-        language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+        language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
     )
     assert isinstance(team.language, Language)
-
-
 
 
 def test_create_sanitize_returned_id_not_integer():
@@ -62,7 +62,7 @@ def test_create_sanitize_returned_id_not_integer():
                 id="1",
                 short_name=PASSING_SHORT_NAME,
                 full_name=PASSING_FULL_NAME,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
 
@@ -75,7 +75,7 @@ def test_create_sanitize_returned_id_out_of_bounds():
                 id=-1,
                 short_name=PASSING_SHORT_NAME,
                 full_name=PASSING_FULL_NAME,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
 
@@ -88,7 +88,7 @@ def test_create_sanitize_returned_short_name_not_string():
                 id=PASSING_ID,
                 short_name=420,
                 full_name=PASSING_FULL_NAME,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
 
@@ -101,7 +101,7 @@ def test_create_sanitize_returned_short_name_out_of_bounds():
                 id=PASSING_ID,
                 short_name="a" * 16,
                 full_name=PASSING_FULL_NAME,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
 
@@ -114,7 +114,7 @@ def test_create_sanitize_returned_full_name_not_string():
                 id=PASSING_ID,
                 short_name=PASSING_SHORT_NAME,
                 full_name=420,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
 
@@ -127,6 +127,6 @@ def test_create_sanitize_returned_full_name_out_of_bounds():
                 id=PASSING_ID,
                 short_name=PASSING_SHORT_NAME,
                 full_name="a" * 120,
-                language=Language(id=PASSING_ID,language=PASSING_LANGUAGE)
+                language=Language(id=PASSING_ID, language=PASSING_LANGUAGE),
             )
             assert team is None
