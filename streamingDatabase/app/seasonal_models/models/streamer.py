@@ -16,7 +16,7 @@ class Streamer(Person):
         team: Team = None,
         languages: List[Language] = None,
     ):
-        Person.__init__(id=id, username=username, discord_handler=discord_handler, team=team)
+        Person.__init__(self, id=id, username=username, discord_handler=discord_handler, team=team)
         self._youtube_handler = youtube_handler
         self._twitch_handler = twitch_handler
         self._bilibili_handler = bilibili_handler
