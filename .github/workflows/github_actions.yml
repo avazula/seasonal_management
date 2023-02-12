@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Allure
-          path: report
+          path: streamingDatabase/seasonal_models/report
