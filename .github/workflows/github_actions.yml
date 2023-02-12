@@ -16,7 +16,7 @@ jobs:
             pwd
       - name: Run unit tests
         run: |
-            cd ../streamingDatabase/ && pip install -r ./requirements.txt
+            cd streamingDatabase/ && pip install -r ./requirements.txt
             cd app/seasonal_models
             pytest --alluredir=report .
             allure serve ./report
