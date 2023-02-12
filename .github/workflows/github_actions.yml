@@ -17,8 +17,9 @@ jobs:
       - name: Run unit tests
         run: |
             cd streamingDatabase/ && pip install -r ./requirements.txt
-            cd app/seasonal_models
+            cd app/
             pip install ./seasonal_models
+            cd seasonal_models/
             pytest --alluredir=report .
             allure serve ./report
             ls
