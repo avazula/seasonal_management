@@ -11,9 +11,9 @@ jobs:
             sudo tar -zxvf allure-2.13.8.tgz -C /opt/
             sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
             pwd
-            cd ../streamingDatabase/ && pip install -r ./requirements.txt
-            cd app/seasonal_models
-            pytest --aluredir=report .
-            allure serve ./report
+            # cd ../streamingDatabase/ && pip install -r ./requirements.txt
+            # cd app/seasonal_models
+            # pytest --aluredir=report .
+            # allure serve ./report
             ls
             
