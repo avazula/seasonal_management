@@ -22,6 +22,7 @@ jobs:
             cd seasonal_models/
             pytest --alluredir=report .
             ls
+            pwd
       - name: Get report
         uses: actions/upload-artifact@v2
         with:
