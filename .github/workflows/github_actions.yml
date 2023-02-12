@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Backend CI
 on: [push]
 jobs:
   Testing:
@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-            sudo apt-add-repository ppa:qameta/allure
-            sudo apt-get update 
-            sudo apt-get install allure -y
+            curl -o allure-2.13.8.tgz -OLs https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
+            sudo tar -zxvf allure-2.13.8.tgz -C /opt/
+            sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
             pwd
             # pip install -r streamingDatabase/requirements.txt
             # cd /streamingDatabase/app/seasonal_models
