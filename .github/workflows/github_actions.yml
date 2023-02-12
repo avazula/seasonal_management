@@ -21,6 +21,9 @@ jobs:
             pip install ./seasonal_models
             cd seasonal_models/
             pytest --alluredir=report .
-            allure serve ./report
             ls
-            
+      - name: Get report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Allure
+          path: report
