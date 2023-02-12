@@ -16,13 +16,10 @@ class Streamer(Person):
         team: Team = None,
         languages: List[Language] = None,
     ):
-        self._id = id
-        self._username = username
-        self._discord_handler = discord_handler
+        Person.__init__(self, id=id, username=username, discord_handler=discord_handler, team=team)
         self._youtube_handler = youtube_handler
         self._twitch_handler = twitch_handler
         self._bilibili_handler = bilibili_handler
-        self._team = team
         self._languages = languages
 
     @property
@@ -38,16 +35,8 @@ class Streamer(Person):
         return self._bilibili_handler
 
     @property
-    def team(self) -> Team:
-        return self._team
-
-    @property
     def languages(self) -> List[Language]:
         return self._languages
-
-    @team.setter
-    def team(self, team: Team) -> None:
-        self._team = team
 
     @languages.setter
     def languages(self, languages: List[Language]) -> None:
