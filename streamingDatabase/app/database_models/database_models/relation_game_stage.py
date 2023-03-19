@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class GameStageDB(Enum):
-    TABLE = "relation_game_stage"  # str
+    TABLE = "sd_relation_game_stage"  # str
+    ID = "id" # str
     GAME = "game"  # int
     STAGE = "stage"  # int

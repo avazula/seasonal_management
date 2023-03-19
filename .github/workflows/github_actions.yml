@@ -1,30 +1,30 @@
-name: GitHub Actions Demo
-run-name: Backend CI
-on: [push]
-jobs:
-  Testing:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+# name: GitHub Actions Demo
+# run-name: Backend CI
+# on: [push]
+# jobs:
+#   Testing:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-            curl -o allure-2.13.8.tgz -OLs https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
-            sudo tar -zxvf allure-2.13.8.tgz -C /opt/
-            sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
-            pwd
-      - name: Run unit tests
-        run: |
-            cd streamingDatabase/ && pip install -r ./requirements.txt
-            cd app/
-            pip install ./seasonal_models
-            cd seasonal_models/
-            pytest --alluredir=report .
-            ls
-            pwd
-      - name: Get unit testing report
-        uses: actions/upload-artifact@v2
-        with:
-          name: allure_unit_tests
-          path: streamingDatabase/app/seasonal_models/report
+#       - name: Install dependencies
+#         run: |
+#             curl -o allure-2.13.8.tgz -OLs https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
+#             sudo tar -zxvf allure-2.13.8.tgz -C /opt/
+#             sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+#             pwd
+#       - name: Run unit tests
+#         run: |
+#             cd streamingDatabase/ && pip install -r ./requirements.txt
+#             cd app/
+#             pip install ./seasonal_models
+#             cd seasonal_models/
+#             pytest --alluredir=report .
+#             ls
+#             pwd
+#       - name: Get unit testing report
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: allure_unit_tests
+#           path: streamingDatabase/app/seasonal_models/report

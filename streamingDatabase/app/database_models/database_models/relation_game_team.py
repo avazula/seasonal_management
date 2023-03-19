@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class GameTeamDB(Enum):
-    TABLE = "relation_game_team"  # str
+    TABLE = "sd_relation_game_team"  # str
+    ID = "id" # str
     GAME = "game"  # int
     TEAM = "team"  # int

@@ -2,5 +2,6 @@ from enum import Enum
 
 
 class StageDB(Enum):
-    TABLE = "stage"  # str
+    TABLE = "sd_stage"  # str
+    ID = "id" # str
     NAME = "name"  # str
