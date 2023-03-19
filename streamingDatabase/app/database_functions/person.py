@@ -120,11 +120,11 @@ class PersonCRUD(DatabaseConnection):
             self.cur.close()
 
 
-# if __name__ == "__main__":
-#     pc = PersonCRUD()
-#     person = pc.create_person_returning_object(username="Jain", discord_handler="avazula#2077")
-#     print("Person: {}")
-#     print(person.username, person.discord_handler)
+if __name__ == "__main__":
+    pc = PersonCRUD()
+    person = pc.create_person_returning_object(username="Jain", discord_handler="avazula#2077")
+    print("Person: {}")
+    print(person.username, person.discord_handler)
 #     pc = PersonCRUD()
 #     updated_person = pc.update_person_returning_object(id=8, username='Jainou', discord_handler='avazula#2078')
 #     print("Person: {}")
