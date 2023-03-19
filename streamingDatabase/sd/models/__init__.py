@@ -3,7 +3,9 @@ from django.db import models
 from .game import Game
 from .language import Language
 from .locale import Locale
+from .map import Map
 from .person import Person
+from .relation_game_map import RelationGameMap
 from .relation_game_stage import RelationGameStage
 from .relation_game_streamer import RelationGameStreamer
 from .relation_game_team import RelationGameTeam
@@ -17,7 +19,9 @@ __all__ = [
     Game,
     Language,
     Locale,
+    Map,
     Person,
+    RelationGameMap,
     RelationGameStage,
     RelationGameTeam,
     RelationGameStreamer,

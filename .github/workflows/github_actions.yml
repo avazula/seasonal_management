@@ -23,8 +23,8 @@ jobs:
             pytest --alluredir=report .
             ls
             pwd
-      - name: Get report
+      - name: Get unit testing report
         uses: actions/upload-artifact@v2
         with:
-          name: Allure
+          name: allure_unit_tests
           path: streamingDatabase/app/seasonal_models/report
